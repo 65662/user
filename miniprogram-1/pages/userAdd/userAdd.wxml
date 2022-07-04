@@ -1,0 +1,30 @@
+<!--pages/userAdd/userAdd.wxml-->
+<form name='userEdit' bindsubmit="saveUserInfo">
+  <view class="items">
+    <text>姓名：</text>
+    <input type="text" name='uname'  class="inputbox"/>
+  </view>
+  <view class="items">
+    <text>性别：</text>
+    <radio-group>
+      <label>男</label>
+      <radio name='usex' value="男"></radio>
+      <label>女</label>
+      <radio name='usex' value="女" checked="true"></radio>
+    </radio-group>
+  </view>
+  <view class="items">
+    <text>年龄：</text>
+    <input type="number" name='uage' class="inputbox" />
+  </view>
+  <view class="items">
+    <text>部门：</text>
+    <input type="text" name='department' class="inputbox" />
+  </view>
+  <view class="items">
+    <text>头像：</text>
+    <image src="{{headpic}}" id="headpic" wx:if="{{headpic}}"></image>
+    <view id="addIcon" bindtap="selectHeadpic">+</view>
+  </view>
+  <button type="primary" form-type="submit" name="btn">提交保存</button>
+</form>

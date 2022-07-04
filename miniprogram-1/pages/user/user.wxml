@@ -1,0 +1,13 @@
+<!--pages/user/user.wxml-->
+<view>
+  <view class="header"><text style="font-weight: 1000;" class="tt">人物列表</text></view>
+  <view class="list">
+    <view wx:for="{{userlist}}" wx:key="index" class="list_item" bindtap="showDetail" data-uid="{{item.uid}}">
+      {{item.uname}}
+      <view>></view>
+    </view>
+  </view>
+  <navigator url="../userAdd/userAdd">
+    <view id="addIcon">+</view>
+  </navigator>
+</view>
