@@ -1,0 +1,25 @@
+<!--pages/userDetail/userDetail.wxml-->
+<text id="title">用户详情</text>
+<navigator url="../addUser/addUser?uid={{userInfo._id}}">
+  <view id="edit">修改</view>
+</navigator>
+<view id="userinfo">
+  <view id="leftBanner">
+    <image src="{{userInfo.headImg}}"></image>
+  </view>
+  <view id="rightBanner">
+    <view>
+    姓名：<text id="uname">{{userInfo.userName}}</text>
+    </view>
+    <view>
+    id：<text class="udetail">{{userInfo._id}}</text>
+    </view>
+    <view>
+    年龄：<text class="udetail">{{userInfo.userAge}}</text>
+    </view>
+    <view>
+    性别：<text class="udetail">{{userInfo.userSex}}</text>
+    单位：<text class="udetail">{{userInfo.userDep}}</text>
+    </view>
+  </view>
+</view>

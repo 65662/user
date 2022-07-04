@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="title">云开发</view>
+  <button type="primary" bindtap="getUserInfo">获取数据</button>
+  <view>
+    {{userinfo.uname}}
+  </view>
+  <view>
+    {{userinfo.usex}}
+  </view>
+  <view>
+    {{userinfo.uage}}
+  </view>
+
+</view>

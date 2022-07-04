@@ -1,0 +1,47 @@
+<!--pages/addUser/addUser.wxml-->
+<form name='userEdit' bindsubmit="saveUserInfo">
+  <view class="items">
+    <text>姓名：</text>
+    <input type="text" name='uname' class="inputbox" value="{{userinfo.userName}}" />
+  </view>
+  <view class="items">
+    <text>性别：</text>
+    <radio-group name='usex'>
+      <!-- 如果性别为男 -->
+      <block wx:if="{{userinfo.userSex == '男'}}">
+        <label>男</label>
+        <radio value="男" checked="true"></radio>
+        <label>女</label>
+        <radio value="女"></radio>
+      </block>
+      <!-- 如果性别为女 -->
+      <block wx:if="{{userinfo.userSex == '女'}}">
+        <label>男</label>
+        <radio value="男"></radio>
+        <label>女</label>
+        <radio value="女" checked="true"></radio>
+      </block>
+      <!-- 如果用户信息不存在 -->
+      <block wx:if="{{!userinfo}}"> 
+        <label>男</label>
+        <radio value="男"></radio>
+        <label>女</label>
+        <radio value="女" checked="true"></radio>
+      </block>
+    </radio-group>
+  </view>
+  <view class="items">
+    <text>年龄：</text>
+    <input type="number" name='uage' class="inputbox" value="{{userinfo.userAge}}" />
+  </view>
+  <view class="items">
+    <text>部门：</text>
+    <input type="text" name='department' class="inputbox" value="{{userinfo.userDep}}" />
+  </view>
+  <view class="items">
+    <text>头像：</text>
+    <image src="{{headpic}}" id="headpic" wx:if="{{headpic}}"></image>
+    <view id="addIcon" bindtap="selectHeadpic">+</view>
+  </view>
+  <button type="primary" form-type="submit" name="btn">提交保存</button>
+</form>

@@ -1,0 +1,41 @@
+/* pages/userDetail/userDetail.wxss */
+#title{
+  text-align: center;
+  color: rgb(169,169,169);
+}
+#leftBanner image{
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 50rpx;
+  box-shadow: gray 0px 0px 5px;
+  margin-top: 50rpx;
+  margin-left: 200rpx;
+}
+#rightBanner{
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+}
+#uname{
+  display: inline-block;
+  font-size: larger;
+  color:  lightslategrey;
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}
+.udetail{
+  display: inline-block;
+  color: lightslategrey;
+  margin-bottom: 20rpx;
+
+}
+#edit{
+  width: 150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  text-align: center;
+  position: fixed;
+  top: 850rpx;
+  left: 50rpx;
+  background-color: cadetblue;
+  border-radius: 100rpx;
+}

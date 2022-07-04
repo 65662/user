@@ -1,0 +1,10 @@
+<!--pages/userList/userList.wxml-->
+<text class="title">用户列表</text>
+<navigator wx:for="{{userlist}}" wx:key="index" url="../userDetail/userDetail?uid={{item._id}}">
+  <view class="userinfo">{{item.userName}}
+    <text class="right-arrow">></text>
+  </view>
+</navigator>
+<view id="addIcon">
+  <navigator url="../addUser/addUser">+</navigator>
+</view>

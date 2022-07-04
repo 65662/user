@@ -1,0 +1,27 @@
+/* pages/userList/userList.wxss */
+.title{
+  text-align: center;
+  color: rgb(169,169,169);
+  font-size: 50rpx;
+}
+.userinfo{
+  margin: 0rpx 50rpx;
+  border-bottom: 1rpx dashed black;
+  padding: 50rpx 0rpx;
+}
+.right-arrow{
+  float: right;
+  color: gray;
+}
+#addIcon{
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  background-color: gainsboro;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 25px;
+  position: fixed;
+  top: 1000rpx;
+  left: 600rpx;
+}
